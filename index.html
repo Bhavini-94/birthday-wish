@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Thousand Reasons to Love You ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #160d16;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* BACKGROUND */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 50% 20%, #632d49 0%, transparent 45%),
+      linear-gradient(145deg, #160d16, #301426, #170d1c);
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #fff3c9;
+    border-radius: 50%;
+    animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+    to {
+        opacity: .15;
+        transform: scale(.4);
+    }
+}
+
+/* COMMON */
+.page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.subtitle {
+    color: #e9c7d3;
+    line-height: 1.9;
+    max-width: 580px;
+    margin: 18px auto;
+    font-size: 15px;
+}
+
+.script {
+    font-family: 'Great Vibes', cursive;
+    color: #ffb5c9;
+    font-size: clamp(55px, 10vw, 90px);
+    font-weight: normal;
+    text-shadow: 0 0 25px #ff719f80;
+}
+
+.heading {
+    font-family: 'Playfair Display', serif;
+    color: #ffe2e8;
+    font-size: clamp(28px, 5vw, 45px);
+    margin: 20px 0;
+}
+
+.eyebrow {
+    color: #e6adbf;
+    letter-spacing: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/* BUTTON */
+.romantic-btn {
+    border: 1px solid #e9a9bd;
+    padding: 15px 30px;
+    border-radius: 40px;
+    color: #57253b;
+    background: linear-gradient(120deg, #f8c0d0, #e9a0b9);
+    font-weight: 500;
+    margin-top: 25px;
+    box-shadow: 0 0 25px #ec8eae50;
+    transition: .3s;
+}
+
+.romantic-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 35px #ec8eae90;
+}
+
+/* OPENING */
+#opening {
+    background: radial-gradient(ellipse at center, #48213980, transparent 65%);
+}
+
+.rose {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: roseFloat 3s ease-in-out infinite;
+}
+
+@keyframes roseFloat {
+    50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+/* ROSE PETALS */
+.petal {
+    position: fixed;
+    top: -40px;
+    z-index: 5;
+    pointer-events: none;
+    animation: falling linear forwards;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(110vh) rotate(600deg);
+        opacity: 0;
+    }
+}
+
+/* MEMORY CARDS */
+.reasons {
+    width: min(950px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.reason {
+    padding: 28px 15px;
+    background: #ffffff0c;
+    border: 1px solid #d88ba52b;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    transition: .3s;
+}
+
+.reason:hover {
+    transform: translateY(-8px);
+    background: #ffffff18;
+}
+
+.reason span {
+    font-size: 35px;
+}
+
+.reason h3 {
+    font-family: 'Playfair Display', serif;
+    color: #ffbfd0;
+    margin: 12px 0;
+}
+
+.reason p {
+    color: #e7c9d5;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* LETTER */
+.letter {
+    width: min(680px, 100%);
+    background: linear-gradient(145deg, #fff0f1, #f8dce5);
+    color: #63364a;
+    padding: clamp(25px, 5vw, 48px);
+    border-radius: 4px 25px 4px 25px;
+    text-align: left;
+    line-height: 2;
+    margin-top: 30px;
+    box-shadow: 0 15px 50px #0005;
+    animation: appear 1s ease;
+}
+
+.letter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    color: #a7466d;
+    margin-bottom: 15px;
+}
+
+.letter p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.sign {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #a7466d;
+    text-align: right;
+    margin-top: 20px;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CAKE */
+.cake {
+    font-size: 95px;
+    margin: 20px;
+    animation: cake 2s infinite ease-in-out;
+}
+
+@keyframes cake {
+    50% { transform: translateY(-12px) scale(1.04); }
+}
+
+/* FINAL */
+.final-heart {
+    color: #ff8eaf;
+    font-size: 75px;
+    animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.25); }
+}
+
+.final-message {
+    max-width: 600px;
+    color: #f1d3df;
+    line-height: 2;
+    margin: 20px auto;
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    bottom: -40px;
+    color: #f18ba9;
+    pointer-events: none;
+    z-index: 6;
+    animation: heartRise 6s linear forwards;
+}
+
+@keyframes heartRise {
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+footer {
+    color: #bd91a4;
+    letter-spacing: 3px;
+    font-size: 10px;
+    padding: 30px;
+}
+
+@media(max-width:650px) {
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+    .reason {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+<div class="stars" id="stars"></div>
+
+<!-- PAGE 1: OPENING -->
+<section class="page" id="opening">
+
+    <div class="rose">🌹</div>
+
+    <div class="eyebrow">
+        A little surprise made with love
+    </div>
+
+    <h1 class="script">
+        Happy Birthday
+    </h1>
+
+    <h2 class="heading">
+        To My Favourite Human ❤️
+    </h2>
+
+    <p class="subtitle">
+        Tonight, the stars shine a little brighter
+        because someone as special as you was born.
+        I made this little world just for you.
+    </p>
+
+    <button class="romantic-btn" onclick="goTo('opening','reasons')">
+        Discover Your Surprise ✨
+    </button>
+
+</section>
+
+<!-- PAGE 2: REASONS -->
+<section class="page hidden" id="reasons">
+
+    <div class="eyebrow">A thousand little reasons</div>
+
+    <h2 class="script">Why I Love You</h2>
+
+    <p class="subtitle">
+        There are so many reasons, but here are
+        a few that make you unforgettable to me.
+    </p>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <span>😊</span>
+            <h3>Your Smile</h3>
+            <p>
+                Your smile can turn an ordinary
+                moment into my favourite memory.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>💗</span>
+            <h3>Your Heart</h3>
+            <p>
+                Your kindness and the way you care
+                make you incredibly special.
+            </p>
+        </div>
+
+        <div class="reason">
+            <span>✨</span>
+            <h3>Being You</h3>
+            <p>
+                I don't need a reason to love you.
+                You are simply my favourite person.
+            </p>
+        </div>
+
+    </div>
+
+    <button class="romantic-btn" onclick="goTo('reasons','letterPage')">
+        Read My Love Letter 💌
+    </button>
+
+</section>
+
+<!-- PAGE 3: LOVE LETTER -->
+<section class="page hidden" id="letterPage">
+
+    <div class="eyebrow">Words from my heart</div>
+
+    <h2 class="script">My Dearest Love</h2>
+
+    <div class="letter">
+
+        <h2>To My Birthday Boy ❤️</h2>
+
+        <p>My sweetest love,</p>
+
+        <p>
+            Happy Birthday to the person who holds
+            such a beautiful place in my heart.
+            I wish I could give you the entire world,
+            because that is how much happiness
+            you deserve.
+        </p>
+
+        <p>
+            You make my days brighter without even
+            realizing it. Your smile, your voice,
+            your little habits, and even our silly
+            conversations are memories I treasure.
+        </p>
+
+        <p>
+            On your special day, I wish you success
+            in every dream you chase, peace in every
+            difficult moment, and happiness that
+            never runs out.
+        </p>
+
+        <p>
+            I hope we keep growing together,
+            supporting each other, laughing at
+            the smallest things, and creating
+            memories that we will remember forever.
+        </p>
+
+        <p>
+            Thank you for being part of my life.
+            I may not always have the perfect words,
+            but I hope you always feel how much
+            you mean to me.
+        </p>
+
+        <p>
+            You are my favourite hello, my sweetest
+            thought, and someone I feel lucky to love.
+        </p>
+
+        <div class="sign">
+            All my love, always ❤️
+        </div>
+
+    </div>
+
+    <button class="romantic-btn" onclick="goTo('letterPage','cakePage')">
+        Make Your Birthday Wish 🎂
+    </button>
+
+</section>
+
+<!-- PAGE 4: BIRTHDAY CAKE -->
+<section class="page hidden" id="cakePage">
+
+    <div class="eyebrow">Your special moment</div>
+
+    <h2 class="script">Make A Wish!</h2>
+
+    <div class="cake">🎂</div>
+
+    <h2 class="heading">Happy Birthday, Handsome!</h2>
+
+    <p class="subtitle">
+        Close your eyes, make a wish,
+        and imagine all your dreams coming true.
+        You deserve every beautiful thing.
+    </p>
+
+    <button class="romantic-btn" onclick="goTo('cakePage','finalPage')">
+        My Final Surprise ❤️
+    </button>
+
+</section>
+
+<!-- PAGE 5: FINAL -->
+<section class="page hidden" id="finalPage">
+
+    <div class="final-heart">♥</div>
+
+    <div class="eyebrow">One last thing</div>
+
+    <h1 class="script">I Choose You</h1>
+
+    <h2 class="heading">Today, Tomorrow & Always</h2>
+
+    <p class="final-message">
+        I cannot promise that every day will be perfect,
+        but I hope we always find reasons to smile,
+        reasons to laugh, and reasons to hold each other
+        a little closer.
+
+        <br><br>
+
+        May this new chapter of your life be filled
+        with unforgettable moments and beautiful
+        surprises.
+
+        <br><br>
+
+        Happy Birthday, my love.
+        You will always have a special place in my heart.
+    </p>
+
+    <h1 class="script">I Love You! 💕</h1>
+
+    <button class="romantic-btn" onclick="location.reload()">
+        Relive Your Surprise ↻
+    </button>
+
+    <footer>CREATED WITH LOVE, JUST FOR YOU</footer>
+
+</section>
+
+<script>
+
+// Create stars
+for(let i=0; i<100; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random()*100 + "%";
+    star.style.top = Math.random()*100 + "%";
+    star.style.animationDelay = Math.random()*3 + "s";
+    document.getElementById("stars").appendChild(star);
+}
+
+// Floating rose petals
+function createPetal() {
+    let petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerHTML = "🌸";
+    petal.style.left = Math.random()*100 + "vw";
+    petal.style.fontSize = (12 + Math.random()*18) + "px";
+    petal.style.animationDuration = (5 + Math.random()*5) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => petal.remove(), 10000);
+}
+
+setInterval(createPetal, 800);
+
+// Floating hearts
+function createHeart() {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = Math.random() > .5 ? "♥" : "♡";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (15 + Math.random()*20) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 600);
+
+// Move between pages
+function goTo(current, next) {
+
+    document.getElementById(current).classList.add("hidden");
+    document.getElementById(next).classList.remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    for(let i=0; i<15; i++) {
+        setTimeout(createHeart, i*100);
+    }
+}
+
+</script>
+
+</body>
+</html>
